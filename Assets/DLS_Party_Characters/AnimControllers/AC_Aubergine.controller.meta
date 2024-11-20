@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: beaf816be08994ca8bb3682227aef05a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249814
+  packageName: Party Fruits - Party game characters
+  packageVersion: 1.0
+  assetPath: Assets/DLS_Party_Characters/AnimControllers/AC_Aubergine.controller
+  uploadId: 571325

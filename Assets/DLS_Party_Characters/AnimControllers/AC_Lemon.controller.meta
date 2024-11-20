@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b706bc0e399f0499cadb658bf21e7efc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249814
+  packageName: Party Fruits - Party game characters
+  packageVersion: 1.0
+  assetPath: Assets/DLS_Party_Characters/AnimControllers/AC_Lemon.controller
+  uploadId: 571325

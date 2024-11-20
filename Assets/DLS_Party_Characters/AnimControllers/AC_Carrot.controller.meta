@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b1d43753486f64406b05be0ebfd368ee
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249814
+  packageName: Party Fruits - Party game characters
+  packageVersion: 1.0
+  assetPath: Assets/DLS_Party_Characters/AnimControllers/AC_Carrot.controller
+  uploadId: 571325

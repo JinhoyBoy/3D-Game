@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c34436055a7b74620b72b83274254281
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249814
+  packageName: Party Fruits - Party game characters
+  packageVersion: 1.0
+  assetPath: Assets/DLS_Party_Characters/AnimControllers/AC_Avocado.controller
+  uploadId: 571325

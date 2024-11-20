@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19031de7030924331a02aacf893a6c12
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249814
+  packageName: Party Fruits - Party game characters
+  packageVersion: 1.0
+  assetPath: Assets/DLS_Party_Characters/AnimControllers/AC_Chilli.controller
+  uploadId: 571325
