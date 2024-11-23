@@ -13,10 +13,7 @@ public class WinScreen : MonoBehaviour
 
     private void Start()
     {
-        if (starsComponent == null)
-        {
-            Debug.LogError("Stars component not found in the scene!");
-        }
+
     }
 
     public void ShowWinScreen()
@@ -75,7 +72,7 @@ public class WinScreen : MonoBehaviour
     {
         // Reset time scale and load level selection scene
         Time.timeScale = 1;
-        if (LevelSelect.currentLevel == LevelSelect.unlockedLevels)
+        if (LevelSelect.currentLevel-1 == LevelSelect.unlockedLevels)
         {
             LevelSelect.unlockedLevels++;
             PlayerPrefs.SetInt("UnlockedLevels", LevelSelect.unlockedLevels);
