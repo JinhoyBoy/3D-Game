@@ -6,21 +6,21 @@ public class ThirdPersonMovement : MonoBehaviour
     public Transform cam;
     private Animator animator;
 
-    public float speed = 6;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3;
+    [SerializeField] private float speed = 6;
+    [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float jumpHeight = 3;
     private float initialSpeed;
     private float initialJumpHeight;
 
     Vector3 velocity;
     bool isGrounded;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private LayerMask groundMask;
 
+    [SerializeField] private float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-    public float turnSmoothTime = 0.1f;
 
     private bool isBouncing = false;
     private float bounceTime = 0.2f; // Duration of the bounce effect
@@ -94,6 +94,13 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
+
+        // Respawn when falling off the map
+        if (transform.position.y < -50)
+        {
+            transform.position = new Vector3(0, 3, 0);
+        }
+
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)

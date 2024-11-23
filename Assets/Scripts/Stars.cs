@@ -3,24 +3,35 @@ using UnityEngine.UI;
 
 public class Stars : MonoBehaviour
 {
-    [SerializeField] Image starImage;
-    [SerializeField] int timeForRemovingStar;
-    float elapsedTime;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Image starImage;
+    [SerializeField] private int timeForRemovingStar; // Time in seconds to remove a star
+    private int michelinStarCount = 3; // Starting star count
+    private float elapsedTime; // Timer to track time passed
+
     void Start()
     {
-        
+        michelinStarCount = 3;
+        elapsedTime = 0f; 
     }
 
-    // Update is called once per frame
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        if (seconds >= timeForRemovingStar)
+
+        // Check if enough time has passed to remove a star
+        if (elapsedTime >= timeForRemovingStar && michelinStarCount > 0)
         {
-            // opacity of the star image is set to 40%
+            michelinStarCount -= 1;
+            elapsedTime = 0f; // Reset the timer
+
+            // Adjust star opacity for the remaining stars
             starImage.color = new Color(1, 1, 1, 0.4f);
         }
     }
+
+    public int GetMichelinStarCount()
+    {
+        return michelinStarCount;
+    }
 }
+

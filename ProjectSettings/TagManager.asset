@@ -7,6 +7,7 @@ TagManager:
   - JumpPad
   - SpeedPad
   - BouncePad
+  - Goal
   layers:
   - Default
   - TransparentFX
