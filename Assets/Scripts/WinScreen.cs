@@ -78,7 +78,10 @@ public class WinScreen : MonoBehaviour
             PlayerPrefs.SetInt("UnlockedLevels", LevelSelect.unlockedLevels);
         }
         int michelinStarCount = starsComponent.GetMichelinStarCount();
-        PlayerPrefs.SetInt("stars" + LevelSelect.currentLevel.ToString(), michelinStarCount);
+        if (michelinStarCount > PlayerPrefs.GetInt("stars" + LevelSelect.currentLevel.ToString(), 0))
+        {
+            PlayerPrefs.SetInt("stars" + LevelSelect.currentLevel.ToString(), michelinStarCount);
+        }
         SceneManager.LoadScene("LevelSelection");
     }
 
