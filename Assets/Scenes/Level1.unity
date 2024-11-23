@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 43080421}
   - component: {fileID: 43080420}
   - component: {fileID: 43080419}
+  - component: {fileID: 43080422}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -446,7 +447,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 43080420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 43080422}
+        m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
+        m_MethodName: GoToLevelSelection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &43080420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +498,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43080417}
   m_CullTransparentMesh: 1
+--- !u!114 &43080422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43080417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17efbfe62b23048c5917140710b9c443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScreen: {fileID: 0}
+  noStar: {fileID: 0}
+  oneStar: {fileID: 0}
+  twoStars: {fileID: 0}
+  threeStars: {fileID: 0}
+  starsComponent: {fileID: 0}
 --- !u!1 &85723875
 GameObject:
   m_ObjectHideFlags: 0

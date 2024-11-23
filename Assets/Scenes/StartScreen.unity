@@ -568,6 +568,7 @@ GameObject:
   - component: {fileID: 1345243406}
   - component: {fileID: 1345243405}
   - component: {fileID: 1345243404}
+  - component: {fileID: 1345243407}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -637,7 +638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1345243405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1345243407}
+        m_TargetAssemblyTypeName: StartScreen, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1345243405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +689,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345243402}
   m_CullTransparentMesh: 1
+--- !u!114 &1345243407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345243402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ba9aa1d606b4e96a3302432e3f75b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1789862683
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +861,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1827290744}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1345243407}
+        m_TargetAssemblyTypeName: StartScreen, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1827290744
 MonoBehaviour:
   m_ObjectHideFlags: 0
