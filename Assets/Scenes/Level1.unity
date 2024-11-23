@@ -510,12 +510,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17efbfe62b23048c5917140710b9c443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 0}
-  noStar: {fileID: 0}
-  oneStar: {fileID: 0}
-  twoStars: {fileID: 0}
-  threeStars: {fileID: 0}
-  starsComponent: {fileID: 0}
+  winScreen: {fileID: 290672650}
+  noStar: {fileID: 177606530}
+  oneStar: {fileID: 1166723938}
+  twoStars: {fileID: 621587822}
+  threeStars: {fileID: 952219748}
+  starsComponent: {fileID: 85723879}
 --- !u!1 &85723875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575125957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.049813718, y: 0, z: 0, w: 0.99875855}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

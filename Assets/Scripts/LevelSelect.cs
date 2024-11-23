@@ -14,7 +14,7 @@ public class LevelSelect : MonoBehaviour
     public void LoadLevel(int levelNumber)
     {
         currentLevel = levelNumber;
-        SceneManager.LoadScene("Level" + levelNumber);
+        SceneManager.LoadScene("Level" + (levelNumber + 1));
     }
 
     private void Start()
@@ -25,6 +25,11 @@ public class LevelSelect : MonoBehaviour
             if (unlockedLevels >= i)
             {
                 levelObjects[i].levelButton.interactable = true;
+                int stars = PlayerPrefs.GetInt("stars" + i.ToString(), 0);
+                for (int j = 0; j < stars; j++)
+                {
+                    levelObjects[i].stars[j].color = Color.white;
+                }
             }
         }
     }

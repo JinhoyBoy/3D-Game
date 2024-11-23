@@ -72,11 +72,13 @@ public class WinScreen : MonoBehaviour
     {
         // Reset time scale and load level selection scene
         Time.timeScale = 1;
-        if (LevelSelect.currentLevel-1 == LevelSelect.unlockedLevels)
+        if (LevelSelect.currentLevel == LevelSelect.unlockedLevels)
         {
             LevelSelect.unlockedLevels++;
             PlayerPrefs.SetInt("UnlockedLevels", LevelSelect.unlockedLevels);
         }
+        int michelinStarCount = starsComponent.GetMichelinStarCount();
+        PlayerPrefs.SetInt("stars" + LevelSelect.currentLevel.ToString(), michelinStarCount);
         SceneManager.LoadScene("LevelSelection");
     }
 
