@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
@@ -5,6 +6,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
     private Animator animator;
+    [SerializeField] AudioSource jumpAudio;
+    [SerializeField] AudioSource bounceAudio;
 
     [SerializeField] private float speed = 6;
     [SerializeField] private float gravity = -9.81f;
@@ -58,6 +61,7 @@ public class ThirdPersonMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+                jumpAudio.Play();
             }
 
             velocity.y += gravity * Time.deltaTime;
@@ -113,6 +117,7 @@ public class ThirdPersonMovement : MonoBehaviour
             case "JumpPad":
                 jumpHeight = 5;
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+                jumpAudio.Play();
                 break;
             case "BouncePad":
                 // Apply initial bounce impulse
@@ -124,6 +129,8 @@ public class ThirdPersonMovement : MonoBehaviour
                 // Set up the bounce timer
                 isBouncing = true;
                 bounceTimer = bounceTime;
+
+                bounceAudio.Play();
                 break;
             default:
                 speed = initialSpeed;
