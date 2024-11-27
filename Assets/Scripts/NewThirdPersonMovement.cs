@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ThirdPersonMovement : MonoBehaviour
+public class NewThirdPersonMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
@@ -27,7 +27,6 @@ public class ThirdPersonMovement : MonoBehaviour
     private bool isBouncing = false;
     private float bounceTime = 0.2f; // Duration of the bounce effect
     private float bounceTimer;
-    [SerializeField] private float bounceForce = 20f; 
 
     void Start()
     {
@@ -92,11 +91,7 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-
-            if (!isBouncing)
-            {
-                controller.Move(moveDir.normalized * speed * Time.deltaTime);
-            }
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
         else
         {
@@ -127,7 +122,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 // Apply initial bounce impulse
                 Vector3 bounceDirection = Vector3.Reflect(transform.forward, hit.normal);
                 bounceDirection.Normalize();
-                velocity = bounceDirection * bounceForce;
+                velocity = bounceDirection * 5;
                 velocity.y = Mathf.Sqrt(0.5f * -2 * gravity);
 
                 // Set up the bounce timer
